@@ -1,0 +1,63 @@
+クラスは以下の4つを持つ。
+---------------------------------
+1. static フィールド（変数）
+2. static メソッド（関数）
+3. non-static フィールド
+4. non-static メソッド
+---------------------------------
+1 と 2 は 静的（static）領域 に属しています。
+3 と 4 は 実体（インスタンス）領域 に属しています。
+実体領域は new する度に生成されます。
+
+静的領域はクラス1つにつき1つしか存在しないので、
+インスタンスを複数生成していても1つだけです。
+
+実体領域はインスタンス毎に生成されるので、インスタンスの個数だけ存在します。
+
+
+属している領域が違いますがお互いにアクセスできます。
+但し static メソッドから non-static フィールドにはアクセスできません。
+
+分かり易く書くと「static」と付いたメソッドから普通の変数にはアクセスできません。
+< 例1 >
+class ex1 {
+    static int staticData;// static フィールド
+    int nonstaticData;// non-static フィールド
+
+    ex1(int input){
+        nonstaticData = input;
+        nonstaticData++;
+    }
+
+    static void printstaticData(){
+    System.out.println(ex1.staticData);// -> 100
+    }
+
+    void printnonstaticData(){
+        System.out.println(nonstaticData);    }
+}
+
+ex1.printstaticData();// -> 0
+// (推奨 static メソッドは生成せずとも存在するのでエラーにならない)
+
+ex1 a = new ex1(1);
+ex1 b = new ex1(2);
+ex1 c = new ex1(3);
+ex1 d = new ex1(4);
+ex1 e = new ex1(5);
+
+a.printstaticData();// -> 5 (非推奨 static フィールドであると分かりづらいから)
+ex1.printstaticData();// -> 5 (インスタンスが生成される度に1ずつ加算されるから)
+
+ex1.printnonstaticData();// -> コンパイルエラー
+/* non-static variables xxx cannot access static yyy method
+ * 理由は non-static フィールドはインスタンスの個数だけ存在するので、
+ * どれに参照すれば良いか分からなくなるからです。 */
+
+a.printnonstaticData();// -> 1 (インスタンス毎に違う値が保存されているから)
+b.printnonstaticData();// -> 2 (インスタンス毎に違う値が保存されているから)
+c.printnonstaticData();// -> 3 (インスタンス毎に違う値が保存されているから)
+
+
+
+
