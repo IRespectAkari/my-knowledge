@@ -1,0 +1,20 @@
+/* ------------------------------------
+
+    Œ³ƒlƒ^: https://www.gstatic.com/ui/v1/activityindicator/loading_24.gif
+
+------------------------------------ */
+.activityindicatator {
+    background-color: blue;
+    clip-path: circle(50px at 50% 50%);
+    animation: ;
+    animation-deray: 5s;
+    animation-name: ai;
+}
+@keyframe ai {
+    from {
+      aa: AA;
+    }
+    to {
+      bb: BB;
+    }
+}

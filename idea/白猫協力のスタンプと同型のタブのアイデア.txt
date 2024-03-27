@@ -1,0 +1,61 @@
+#contentsListSwich
+チェックボックスになっていて、onoffで回転、目次リストの表示非表示を行う。
+#contentsListName
+「目次」と書かれていて、以下の目次を格納している「コンテナ（表示上）」ように見せる。
+#contentsList
+目次一覧のリスト
+
+-----------------------------------------------------------
+HTML
+-----------------------
+<input type="checkbox" name="contentsListSwich" id="contentsListSwich">
+
+
+
+
+
+
+
+-----------------------------------------------------------
+CSS
+-----------------------
+#contentsListSwich
+チェックボックスになっていて、onoffで回転、目次リストの表示非表示を行う。
+#contentsListName
+「目次」と書かれていて、以下の目次を格納している「コンテナ（表示上）」ように見せる。
+#contentsList
+目次一覧のリスト
+
+//off状態のスイッチ
+#contentsListSwich:not(:checked) {
+    
+}
+//on状態のスイッチ
+#contentsListSwich:checked {
+    
+}
+//目次のコンテナ
+#contentsListName {
+    content: "目次";
+    animation-duration: .5s;
+}
+//目次のリスト
+#contentsList {
+    animation-delay: .5s;
+}
+
+
+
+#divclass(contents_hover){&font(b,150%){目次}
+#contents(level=1,fromhere=true)}
+
+
+
+
+
+
+
+
+
+
+

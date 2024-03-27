@@ -1,0 +1,10 @@
+﻿.velocity {
+    font-weight: bold;
+}
+.acceleration {
+    font-weight: bold;
+    color: red;
+}
+a:hover {
+    background-color: #adffff;
+}

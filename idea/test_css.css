@@ -1,0 +1,71 @@
+body {
+    margin: 0;
+}
+.cover {
+    margin: 0 -20px;
+}
+
+.cover img {
+    width: 100%;
+    max-height: 500px;
+}
+
+.contents {
+    margin: 0 20px;
+}
+
+[class^="test_"] {
+    width: 80%;
+    height: 20%;
+    margin: 1% 10%;
+}
+.test_1 {
+    background: linear-gradient(45deg, red, blue);
+}
+/* --------------------------------
+:root {
+    --frgb_r: 55;
+    --frgb_g: 55;
+    --frgb_b: 55;
+    --trgb_r: 200;
+    --trgb_g: 200;
+    --trgb_b: 200;
+    --fromColor: rgb(var(--frgb_r), var(--frgb_g), var(--frgb_b));
+    --toColor: rgb(var(--trgb_r), var(--trgb_g), var(--trgb_b));
+}
+-------------------------------- */
+@keyframes gradetion {
+    from {
+      --frgb_r: 25;
+      --frgb_g: 25;
+      --frgb_b: 25;
+      --trgb_r: 100;
+      --trgb_g: 100;
+      --trgb_b: 100;
+    }
+    to {
+      --frgb_r: 75;
+      --frgb_g: 75;
+      --frgb_b: 75;
+      --trgb_r: 200;
+      --trgb_g: 200;
+      --trgb_b: 200;
+    }
+}
+:root {
+    --fromColor: rgb(var(--frgb_r), var(--frgb_g), var(--frgb_b));
+    --toColor: rgb(var(--trgb_r), var(--trgb_g), var(--trgb_b));
+}
+.test_2 {
+    background: linear-gradient(45deg, var(--fromColor), var(--toColor));
+    animation: 10s infinite alternate gradetion;
+}
+
+.test_3 {
+    background: linear-gradient(45deg, var(--fromColor), var(--toColor));
+}
+
+
+.test_5 {
+    display: none;
+}
