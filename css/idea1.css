@@ -1,0 +1,7 @@
+/* フォント一覧 */
+h1 {
+/*  筆記体フォント  */
+  font-family: 'Parisienne';
+/*  全て大文字化＆ブロック体っぽくなる  */
+  font-family: 'Roboto Condensed';
+}
