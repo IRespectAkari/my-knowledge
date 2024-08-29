@@ -5,3 +5,25 @@ h1 {
 /*  全て大文字化＆ブロック体っぽくなる  */
   font-family: 'Roboto Condensed';
 }
+/* 以下のようなnav用css */
+/* 参考元 https://linux.command-ref.com/command-df.html
+ * nav
+ *   dl
+ *     dt タイトル /dt
+ *     dd
+ *       ul
+ *         li a ホニャララ /a /li
+ *         li a ホニャララ /a /li
+ *       /ul
+ *     /dd
+ *   /dl
+ * /nav
+ */
+nav ul li {
+  border-bottom-color: rgb(61, 68, 72);
+}
+nav ul li a {
+  text-decoration: none;
+  padding: 2px 8px;
+  display: block;
+}
