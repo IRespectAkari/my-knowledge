@@ -8,15 +8,15 @@ h1 {
 /* 以下のようなnav用css */
 /* 参考元 https://linux.command-ref.com/command-df.html
  * <nav>
- *   dl>
- *   | <dt> タイトル /dt>
- *   | <dd>
- *   | | <ul>
- *   | | | <li><a> ホニャララ </a></li>
- *   | | | <li><a> ホニャララ </a></li>
- *   | | </ul>
- *   | </dd>
- *   </dl>
+ * | dl>
+ * | | <dt> タイトル /dt>
+ * | | <dd>
+ * | | | <ul>
+ * | | | | <li><a> ホニャララ </a></li>
+ * | | | | <li><a> ホニャララ </a></li>
+ * | | | </ul>
+ * | | </dd>
+ * | </dl>
  * </nav>
  */
 nav ul li {
